@@ -13,5 +13,5 @@ services:
         ports:
             - '9332:9332'
         volumes:
-            - /Users/nisakov/vdata/lcoin:/data/lcoin
+            - /vdata/lcoin:/data/lcoin
 
