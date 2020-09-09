@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+    app:
+        container_name: hs-lcoin-node
+        environment:
+            - NODE_ENV=production
+            - PORT=9332
+
+        command: /app/lcoin/bin/lcoin --config /app/lcoin/conf/lcoin.conf
+        build:
+            context: '.'
+            dockerfile: './docker/Dockerfile'
+        ports:
+            - '9332:9332'
+        volumes:
+            - /Users/nisakov/vdata/lcoin:/data/lcoin
+
