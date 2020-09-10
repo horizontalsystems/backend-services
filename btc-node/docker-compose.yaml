@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+    bcoin:
+        container_name: hs-bcoin
+        command: /app/bcoin/bin/bcoin --network=testnet --config=/app/bcoin/conf/bcoin.conf --prefix=/data/bcoin
+        build:
+            context: '.'
+            dockerfile: './bcoin/docker/Dockerfile'
+        ports:
+            - '8332:8332'
+        volumes:
+            - /vdata/bcoin:/data/bcoin
