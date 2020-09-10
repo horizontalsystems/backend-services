@@ -1,0 +1,23 @@
+{
+  "network": "livenet",
+  "port": 3001,
+  "services": [
+    "@dashevo/insight-api",
+    "@dashevo/insight-ui",
+    "dashd",
+    "web"
+  ],
+  "servicesConfig": {
+    "dashd": {
+      "connect": [
+        {
+          "rpchost": "dashcore",
+          "rpcport": 9998,
+          "rpcuser": "dash",
+          "rpcpassword": "local321",
+          "zmqpubrawtx": "tcp://dashcore:28332"
+        }
+      ]
+    }
+  }
+}
