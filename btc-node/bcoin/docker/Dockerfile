@@ -13,9 +13,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ADD https://github.com/bcoin-org/bcoin/archive/v2.0.0.tar.gz /tmp/
 
-RUN tar -xzf /tmp/v1.0.2.tar.gz -C .
-RUN mv bcoin-1.0.2/* .
-RUN rm -Rf bcoin-1.0.2
+RUN tar -xzf /tmp/v2.0.0.tar.gz -C .
+RUN mv bcoin-2.0.0/* .
+RUN rm -Rf bcoin-2.0.0
 RUN npm install
 
 COPY ./bcoin/conf/*  ./conf/
