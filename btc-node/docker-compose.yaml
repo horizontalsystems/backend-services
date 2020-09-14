@@ -2,7 +2,7 @@ version: '3.8'
 services:
     bcoin:
         container_name: hs-bcoin
-        command: /app/bcoin/bin/bcoin --network=testnet --config=/app/bcoin/conf/bcoin.conf --prefix=/data/bcoin
+        command: /app/bcoin/bin/bcoin --config=/app/bcoin/conf/bcoin.conf --prefix=/data/bcoin
         build:
             context: '.'
             dockerfile: './bcoin/docker/Dockerfile'
