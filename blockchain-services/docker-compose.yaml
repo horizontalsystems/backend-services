@@ -1,0 +1,51 @@
+version: '3.8'
+services:
+    nginx-bchain-srv:
+        container_name: hs-nginx-bchain-srv
+        depends_on:
+            - btc-core
+            - ltc-core
+        build:
+            context: '.'
+            dockerfile: './nginx/docker/Dockerfile'
+        ports:
+            - '8080:8080'
+            - '8081:8081'
+    btc-core:
+        container_name: hs-btc-core
+        image: ruimarinho/bitcoin-core
+        environment:
+            - BITCOIN_DATA=/data/btc
+        command:
+            -server=1
+            -prune=10000
+            -rpcport=8332
+            -rpcallowip=0.0.0.0/0
+            -rpcbind=0.0.0.0
+            -rpcuser=temp_rpc_user
+            -rpcpassword=temp_rpc_psw
+            -zmqpubrawblock=tcp://0.0.0.0:28332
+            -zmqpubrawtx=tcp://0.0.0.0:28333
+        ports:
+            - '8332:8332'
+        volumes:
+            - /Users/nisakov/vdata/bitcoin:/data/btc
+    ltc-core:
+        container_name: hs-ltc-core
+        image: uphold/litecoin-core
+        environment:
+            - LITECOIN_DATA=/data/ltc
+        command:
+            -server=1
+            -prune=10000
+            -rpcport=8332
+            -rpcallowip=0.0.0.0/0
+            -rpcbind=0.0.0.0
+            -rpcuser=temp_rpc_user
+            -rpcpassword=temp_rpc_psw
+            -zmqpubrawblock=tcp://0.0.0.0:28332
+            -zmqpubrawtx=tcp://0.0.0.0:28333
+        ports:
+            - '9332:8332'
+        volumes:
+            - /Users/nisakov/vdata/ltc:/data/ltc
