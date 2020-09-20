@@ -29,7 +29,7 @@ services:
         ports:
             - '8332:8332'
         volumes:
-            - /Users/nisakov/vdata/bitcoin:/data/btc
+            - /vdata/bitcoin:/data/btc
     ltc-core:
         container_name: hs-ltc-core
         image: uphold/litecoin-core
@@ -48,4 +48,4 @@ services:
         ports:
             - '9332:8332'
         volumes:
-            - /Users/nisakov/vdata/ltc:/data/ltc
+            - /vdata/ltc:/data/ltc
