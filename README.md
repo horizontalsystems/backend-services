@@ -1,6 +1,6 @@
 # Docker images for Backend-services
 
-Set of docker images and docker-compose build files for blockchain service
+Set of docker images and docker-compose build files for blockchain services.
 
 
 ## Blockchain-services
@@ -43,7 +43,7 @@ docker-compose up -d
 ```
 ## Btc-node
 
-BCOIN api for Bitcoin.
+Bitcoin API based on BCOIN
 
 Installation :
 ```bash
@@ -59,7 +59,7 @@ docker-compose up -d
 ```
 ## Ltc-node
 
-Lcoin api for LTC.
+Litcoin API based on LCOIN
 
 Installation :
 ```bash
