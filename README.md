@@ -8,7 +8,7 @@ Set of docker images and docker-compose build files for blockchain services.
 Docker images for fee services. Composed from 3 containers (nginx , btc-node, ltc-node).
 Nginx container redirects (proxy) requests to nodes Fee RPC enpoints.
 
-**/fee/avg**  resuest simply proxied to nodes that call below RPC method:
+**/fee/avg**  request simply proxied to nodes that call below RPC method:
 ```json
 {
   "id": "0",
