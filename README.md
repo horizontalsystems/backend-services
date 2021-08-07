@@ -32,9 +32,9 @@ Available requests:
 
 | URI       | Description |
 | --------- | -------- |
-| /fee/low  | Get average fee (blocks: 40) |
+| /fee/low  | Get low fee (blocks: 40) |
 | /fee/avg  | Get average fee (blocks: 12) |
-| /fee/high | Get average fee (blocks: 3) |
+| /fee/high | Get high fee (blocks: 3) |
 
 
 Installation :
