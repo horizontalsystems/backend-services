@@ -11,11 +11,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ADD https://github.com/dashpay/dash/releases/download/v0.16.0.1/dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz /tmp/
+ADD https://github.com/dashpay/dash/releases/download/v0.17.0.3/dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz /tmp/
 
-RUN tar -xzf /tmp/dashcore-0.16.0.1-x86_64-linux-gnu.tar.gz -C .
-RUN mv dashcore-0.16.0/* .
-RUN rm -Rf dashcore-0.16.0
+RUN tar -xzf /tmp/dashcore-0.17.0.3-x86_64-linux-gnu.tar.gz -C .
+RUN mv dashcore-0.17.0/* .
+RUN rm -Rf dashcore-0.17.0
 
 COPY ./dashcore/conf ./conf
 
