@@ -51,6 +51,7 @@ docker-compose up -d
 ```
 ## Dash-node
 
+Before installation verify correct version for node, current version is 0.17.0.3, update ./dashcore/Dockerfile if needed.
 Insight api and block-explorer for Dash. Composed from 2 containers (Dash-node, dashcore-node with insight-api and UI)
 
 Installation :
